@@ -4,22 +4,22 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    quote: "Customer GPS provided invaluable insights that helped us refine our target audience and significantly boost our conversion rates. Their DTC expertise is unmatched.",
-    author: "Sarah L., Founder of Aura Skincare",
-    avatar: "https://placehold.co/80x80.png",
-    avatarHint: "woman portrait"
-  },
-  {
-    quote: "The market analysis from Customer GPS was a game-changer for our new product launch. We went to market with confidence and saw immediate results.",
-    author: "Mike B., CEO of Peak Performance Gear",
+    quote: "Bookie Research helped us optimize our product pricing during a critical growth phase. They used sophisticated methods I'd seen major consulting firms charge 5x more for, and delivered clearer, more actionable insights.",
+    author: "Steve Clark, CEO, Odyssey Bars",
     avatar: "https://placehold.co/80x80.png",
     avatarHint: "man portrait"
   },
   {
-    quote: "We were struggling to understand customer churn. Customer GPS's research helped us identify key pain points and implement effective retention strategies.",
-    author: "Jessica T., Marketing Director at Home Comforts Co.",
+    quote: "We integrated Bookie's survey findings with our Shopify analytics and saw conversion rates increase within months. Their understanding of the DTC space made all the difference.",
+    author: "Christian Thrapp, Founder and CEO, Drift",
     avatar: "https://placehold.co/80x80.png",
-    avatarHint: "person portrait"
+    avatarHint: "man portrait"
+  },
+  {
+    quote: "Bookie Research helped us understand exactly what our target audience wanted. Their insights shaped our entire product roadmap and marketing strategy.",
+    author: "Garrett Dorman, Investor Utah Boat Club",
+    avatar: "https://placehold.co/80x80.png",
+    avatarHint: "man portrait"
   },
 ];
 
