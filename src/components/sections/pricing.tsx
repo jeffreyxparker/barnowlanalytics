@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DollarSign, Sparkles, Settings2, ArrowRight } from "lucide-react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -14,18 +13,8 @@ export default function PricingPhilosophySection() {
             We believe growing DTC brands deserve enterprise-quality research at accessible prices. While each engagement is tailored to your specific needs, our quasi-templatized and streamlined process allows us to deliver exceptional value.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center">
-            <Image 
-              src="https://placehold.co/500x350.png" 
-              alt="Business discussion about pricing" 
-              width={500} 
-              height={350} 
-              className="rounded-lg shadow-xl"
-              data-ai-hint="meeting finance"
-            />
-          </div>
-          <div className="space-y-6">
+        <div className="mt-12">
+          <div className="space-y-6 max-w-2xl mx-auto">
             <Card className="bg-card border-border">
               <CardHeader className="flex flex-row items-center gap-4">
                 <Sparkles className="h-8 w-8 text-primary" />
