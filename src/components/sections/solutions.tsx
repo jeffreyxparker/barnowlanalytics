@@ -123,7 +123,7 @@ export default function SolutionsSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-headline">Our Research Solutions for DTC Brands</h2>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {solutions.map((solution) => (
             <Card key={solution.title} className="bg-background border-border shadow-lg hover:shadow-accent/20 transition-shadow duration-300 flex flex-col">
               <CardHeader>
