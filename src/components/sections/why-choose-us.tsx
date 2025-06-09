@@ -25,9 +25,7 @@ export default function WhyChooseUsSection() {
       <div className="container max-w-screen-xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-headline">Why DTC Brands Choose Us</h2>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            Unlock the full potential of your brand with research designed specifically for the Direct-to-Consumer landscape.
-          </p>
+          
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
