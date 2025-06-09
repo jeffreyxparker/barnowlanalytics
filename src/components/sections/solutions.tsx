@@ -40,9 +40,6 @@ export default function SolutionsSection() {
       <div className="container max-w-screen-xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-headline">Our Research Solutions for DTC Brands</h2>
-          <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            From understanding your audience to optimizing your campaigns, we offer a suite of research services tailored for DTC success.
-          </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution) => (
