@@ -1,5 +1,7 @@
 import { ContactForm } from "@/components/contact-form";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, CalendarDays } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function ContactSection() {
   return (
@@ -21,25 +23,37 @@ export default function ContactSection() {
               <Mail className="h-8 w-8 text-accent mt-1 flex-shrink-0" />
               <div>
                 <h4 className="text-xl font-semibold text-primary mb-1 font-headline">Email Us</h4>
-                <p className="text-foreground/70">hello@customergps.com</p>
-                <p className="text-sm text-muted-foreground">We typically respond within 24 hours.</p>
+                <p className="text-foreground/70">info@surveyspark.com</p>
+                <Button asChild variant="outline" size="sm" className="mt-3">
+                  <Link href="mailto:info@surveyspark.com">
+                    Email Us <Mail className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
               </div>
             </div>
              <div className="flex items-start gap-4 p-6 bg-card rounded-lg shadow-md">
               <Phone className="h-8 w-8 text-accent mt-1 flex-shrink-0" />
               <div>
                 <h4 className="text-xl font-semibold text-primary mb-1 font-headline">Call Us</h4>
-                <p className="text-foreground/70">(555) 123-4567</p>
-                <p className="text-sm text-muted-foreground">Mon-Fri, 9am - 5pm EST</p>
+                <p className="text-foreground/70">801-699-4700</p>
+                <Button asChild variant="outline" size="sm" className="mt-3">
+                  <Link href="tel:801-699-4700">
+                    Call Us <Phone className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
               </div>
             </div>
              <div className="flex items-start gap-4 p-6 bg-card rounded-lg shadow-md">
-              <MapPin className="h-8 w-8 text-accent mt-1 flex-shrink-0" />
+              <CalendarDays className="h-8 w-8 text-accent mt-1 flex-shrink-0" />
               <div>
-                <h4 className="text-xl font-semibold text-primary mb-1 font-headline">Our Office</h4>
-                <p className="text-foreground/70">123 Insight Avenue, Suite 404</p>
-                <p className="text-foreground/70">Growth City, USA 12345</p>
-                <p className="text-sm text-muted-foreground">By appointment only.</p>
+                <h4 className="text-xl font-semibold text-primary mb-1 font-headline">Schedule a Call</h4>
+                <p className="text-foreground/70">Book a convenient time to discuss your needs.</p>
+                {/* Make sure to replace the href below with your actual Calendly link */}
+                <Button asChild variant="outline" size="sm" className="mt-3">
+                  <Link href="https://calendly.com/your-link" target="_blank" rel="noopener noreferrer">
+                    Schedule Now <CalendarDays className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
