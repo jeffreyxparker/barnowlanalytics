@@ -21,10 +21,13 @@ export default function AboutUsSection() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 font-headline">About Customer GPS</h2>
             <p className="text-lg text-foreground/80 mb-4">
-              At Customer GPS, we are passionate about helping Direct-to-Consumer brands thrive. Founded by research veterans with deep DTC experience, we saw a need for specialized insights that go beyond generic market data.
+              Founded by Jeff Parker, former leader of the Advanced Analytics team at Qualtrics, Bookie Research brings enterprise-level survey expertise to growing DTC brands.
+            </p>
+            <p className="text-lg text-foreground/80 mb-4">
+              Our team combines talent from industry leaders like Qualtrics, Sawtooth Software, and Dynata with specialized knowledge of the Shopify ecosystem and DTC business models.
             </p>
             <p className="text-lg text-foreground/80 mb-6">
-              Our mission is to empower DTC brands with the clarity and direction needed to make smarter decisions, connect authentically with customers, and achieve sustainable growth. We combine rigorous research methodologies with a practical, results-oriented approach.
+              Based in Utah and Chicago, we're positioned at the intersection of cutting-edge research methodology and practical DTC marketing expertise.
             </p>
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
               <Link href="#contact">
