@@ -14,39 +14,46 @@ export default function PricingPhilosophySection() {
           </p>
         </div>
         <div className="mt-12">
-          <div className="space-y-6 max-w-2xl mx-auto">
-            <Card className="bg-card border-border">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <Sparkles className="h-8 w-8 text-primary" />
-                <CardTitle className="text-2xl text-foreground font-headline">DTC-Optimized</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/70">Our templated approaches for DTC brands mean faster delivery and lower costs.</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-card border-border">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <Settings2 className="h-8 w-8 text-primary" />
-                <CardTitle className="text-2xl text-foreground font-headline">Customized Packages and Scoping</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/70">We'll work with you to define exactly what you need to know.</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-card border-border">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <DollarSign className="h-8 w-8 text-primary" />
-                <CardTitle className="text-2xl text-foreground font-headline">Transparent Pricing</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/70">No hidden costs or surprise fees.</p>
-              </CardContent>
-            </Card>
-            <Button asChild size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-4">
-              <Link href="#contact">
-                Request Pricing Information <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+          {/* Container for the grid and button, centered and with max-width */}
+          <div className="max-w-4xl mx-auto">
+            {/* 1x3 Grid for the cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="bg-card border-border flex flex-col">
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <Sparkles className="h-8 w-8 text-primary" />
+                  <CardTitle className="text-2xl text-foreground font-headline">DTC-Optimized</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-foreground/70">Our templated approaches for DTC brands mean faster delivery and lower costs.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-card border-border flex flex-col">
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <Settings2 className="h-8 w-8 text-primary" />
+                  <CardTitle className="text-2xl text-foreground font-headline">Customized Packages and Scoping</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-foreground/70">We'll work with you to define exactly what you need to know.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-card border-border flex flex-col">
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <DollarSign className="h-8 w-8 text-primary" />
+                  <CardTitle className="text-2xl text-foreground font-headline">Transparent Pricing</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-foreground/70">No hidden costs or surprise fees.</p>
+                </CardContent>
+              </Card>
+            </div>
+            {/* Button centered below the grid */}
+            <div className="mt-12 text-center">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Link href="#contact">
+                  Request Pricing Information <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
