@@ -14,7 +14,7 @@ const testimonials = [
     quote: "We integrated Bookie's survey findings with our Shopify analytics and saw conversion rates increase within months. Their understanding of the DTC space made all the difference.",
     author: "Christian Thrapp",
     title: "Founder and CEO, Drift",
-    avatar: "https://placehold.co/80x80.png",
+    avatar: "https://media.licdn.com/dms/image/v2/C5103AQFSPqPr7QP4Ww/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516997696151?e=1755129600&v=beta&t=M5ADfBtD5tBRkaYHfXpQ112fnhCcovg9Dp9wUfKhSdQ",
     avatarHint: "man portrait"
   },
   {
