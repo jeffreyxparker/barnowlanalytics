@@ -10,12 +10,12 @@ export default function AboutUsSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-square max-w-md mx-auto md:max-w-none md:mx-0">
             <Image 
-              src="https://placehold.co/500x500.png" 
-              alt="Customer GPS Team" 
+              src="/images/timp.jpg" 
+              alt="Scenic view for Customer GPS" 
               layout="fill"
               objectFit="cover"
               className="rounded-lg shadow-2xl"
-              data-ai-hint="team working"
+              data-ai-hint="mountain landscape"
             />
           </div>
           <div>
