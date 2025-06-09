@@ -32,7 +32,7 @@ export default function WhyChooseUsSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-headline">Why DTC Brands Choose Us</h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
           {features.map((feature, index) => (
             <Card key={index} className="bg-card border-border shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
               <CardHeader className="items-center text-center">
