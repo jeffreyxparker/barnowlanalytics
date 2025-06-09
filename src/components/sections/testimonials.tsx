@@ -8,7 +8,7 @@ const testimonials = [
     author: "Steve Clark",
     title: "CEO, Odyssey Bars",
     avatar: "https://placehold.co/80x80.png",
-    avatarHint: "man portrait"
+    avatarHint: "man outdoors"
   },
   {
     quote: "We integrated Bookie's survey findings with our Shopify analytics and saw conversion rates increase within months. Their understanding of the DTC space made all the difference.",
