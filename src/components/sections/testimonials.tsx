@@ -7,21 +7,21 @@ const testimonials = [
     quote: "Bookie Research helped us optimize our product pricing during a critical growth phase. They used sophisticated methods I'd seen major consulting firms charge 5x more for, and delivered clearer, more actionable insights.",
     author: "Steve Clark",
     title: "CEO, Odyssey Bars",
-    avatar: "https://placehold.co/80x80.png",
+    avatar: "/avatars/steve-clark.jpg", // Updated to local path
     avatarHint: "man outdoors"
   },
   {
     quote: "We integrated Bookie's survey findings with our Shopify analytics and saw conversion rates increase within months. Their understanding of the DTC space made all the difference.",
     author: "Christian Thrapp",
     title: "Founder and CEO, Drift",
-    avatar: "/avatars/christian-thrapp.jpg", // Updated to local path
+    avatar: "/avatars/christian-thrapp.jpg", 
     avatarHint: "man portrait"
   },
   {
     quote: "Bookie Research helped us understand exactly what our target audience wanted. Their insights shaped our entire product roadmap and marketing strategy.",
     author: "Garrett Dorman",
     title: "Investor Utah Boat Club",
-    avatar: "https://placehold.co/80x80.png",
+    avatar: "/avatars/garrett-dorman.jpg", // Updated to local path
     avatarHint: "man portrait"
   },
 ];
