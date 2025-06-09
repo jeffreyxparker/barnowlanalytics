@@ -5,19 +5,22 @@ import Image from "next/image";
 const testimonials = [
   {
     quote: "Bookie Research helped us optimize our product pricing during a critical growth phase. They used sophisticated methods I'd seen major consulting firms charge 5x more for, and delivered clearer, more actionable insights.",
-    author: "Steve Clark, CEO, Odyssey Bars",
+    author: "Steve Clark",
+    title: "CEO, Odyssey Bars",
     avatar: "https://placehold.co/80x80.png",
     avatarHint: "man portrait"
   },
   {
     quote: "We integrated Bookie's survey findings with our Shopify analytics and saw conversion rates increase within months. Their understanding of the DTC space made all the difference.",
-    author: "Christian Thrapp, Founder and CEO, Drift",
+    author: "Christian Thrapp",
+    title: "Founder and CEO, Drift",
     avatar: "https://placehold.co/80x80.png",
     avatarHint: "man portrait"
   },
   {
     quote: "Bookie Research helped us understand exactly what our target audience wanted. Their insights shaped our entire product roadmap and marketing strategy.",
-    author: "Garrett Dorman, Investor Utah Boat Club",
+    author: "Garrett Dorman",
+    title: "Investor Utah Boat Club",
     avatar: "https://placehold.co/80x80.png",
     avatarHint: "man portrait"
   },
@@ -32,19 +35,28 @@ export default function TestimonialsSection() {
         </div>
         <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-background border-border shadow-xl p-6 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
-              <Quote className="h-10 w-10 text-primary mb-4 transform rotate-180" />
-              <CardContent className="flex-grow">
-                <p className="text-foreground/80 italic mb-6">&ldquo;{testimonial.quote}&rdquo;</p>
-                <Image 
-                  src={testimonial.avatar} 
-                  alt={testimonial.author} 
-                  width={80} 
-                  height={80} 
-                  className="rounded-full mx-auto mb-3 border-2 border-primary"
-                  data-ai-hint={testimonial.avatarHint}
-                />
-                <p className="font-semibold text-primary">{testimonial.author}</p>
+            <Card key={index} className="bg-background border-border shadow-xl p-6 flex flex-col transform hover:scale-105 transition-transform duration-300">
+              <CardContent className="flex-grow flex flex-col justify-between">
+                <div> {/* Wrapper for quote icon and text */}
+                  <Quote className="h-8 w-8 text-primary mb-4" />
+                  <p className="text-foreground/80 mb-6 text-left">&ldquo;{testimonial.quote}&rdquo;</p>
+                </div>
+                <div className="pt-4 border-t border-border/20 mt-4"> {/* Author attribution section */}
+                  <div className="flex items-center gap-3">
+                    <Image 
+                      src={testimonial.avatar} 
+                      alt={testimonial.author} 
+                      width={50} 
+                      height={50} 
+                      className="rounded-full border-2 border-primary"
+                      data-ai-hint={testimonial.avatarHint}
+                    />
+                    <div>
+                      <p className="font-semibold text-primary text-left">{testimonial.author}</p>
+                      <p className="text-sm text-muted-foreground text-left">{testimonial.title}</p>
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           ))}
