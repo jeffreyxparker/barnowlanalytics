@@ -10,10 +10,10 @@ export default function HeroSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight font-headline">
-              Navigate Your DTC Success with Precision Insights
+              Turn Customer Insights Into Growth
             </h1>
             <p className="text-lg md:text-xl text-foreground/80 mb-8">
-              Customer GPS provides specialized survey research to help Direct-to-Consumer brands understand their audience, refine strategies, and drive growth.
+              Customer GPS helps growing DTC brands unlock customer insights that drive measurable growth. Our syndicated survey methodologies are designed specifically for direct-to-consumer businesses at critical growth stages.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
