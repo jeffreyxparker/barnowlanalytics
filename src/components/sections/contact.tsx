@@ -1,6 +1,5 @@
 
 import { Mail, Phone, CalendarDays } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function ContactSection() {
@@ -23,11 +22,6 @@ export default function ContactSection() {
               </Link>
               <p className="text-sm text-muted-foreground">We typically respond within 24 business hours.</p>
             </div>
-            <Button asChild size="sm" className="flex-shrink-0 self-center bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-              <Link href="mailto:info@barnowlanalytics.com">
-                Email Us <Mail className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
           </div>
           <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-md">
             <Phone className="h-8 w-8 text-foreground flex-shrink-0 mt-1" />
@@ -38,28 +32,18 @@ export default function ContactSection() {
               </Link>
               <p className="text-sm text-muted-foreground">Available weekdays, 8 AM - 5 PM Mountain Time.</p>
             </div>
-            <Button asChild size="sm" className="flex-shrink-0 self-center bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-              <Link href="tel:801-699-4700">
-                Call Us <Phone className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
           </div>
           <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-md">
             <CalendarDays className="h-8 w-8 text-foreground flex-shrink-0 mt-1" />
             <div className="flex-grow">
               <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Schedule a Meeting</h4>
-              <p className="text-sm mt-1 mb-1">
+               <p className="text-sm mt-1 mb-1">
                 <Link href="https://calendar.app.google/kYr7jRbkcKkvQ1DcA" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   Google Calendar Scheduler
                 </Link>
               </p>
               <p className="text-sm text-muted-foreground">The most reliable way to connect at your convenience.</p>
             </div>
-            <Button asChild size="sm" className="flex-shrink-0 self-center bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-              <Link href="https://calendar.app.google/kYr7jRbkcKkvQ1DcA" target="_blank" rel="noopener noreferrer">
-                Schedule <CalendarDays className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
           </div>
         </div>
       </div>
