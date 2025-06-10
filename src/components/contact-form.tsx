@@ -18,6 +18,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
 import React from 'react';
+import { cn } from "@/lib/utils";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -93,7 +94,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-foreground">Full Name</FormLabel>
               <FormControl>
-                <Input placeholder="John Doe" {...field} disabled={isSubmitting} />
+                <Input placeholder="John Doe" {...field} disabled={isSubmitting} className="text-white" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -106,7 +107,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-foreground">Email Address</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="john.doe@example.com" {...field} disabled={isSubmitting} />
+                <Input type="email" placeholder="john.doe@example.com" {...field} disabled={isSubmitting} className="text-white" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -119,7 +120,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-foreground">Company Name</FormLabel>
               <FormControl>
-                <Input placeholder="Acme Corp" {...field} disabled={isSubmitting} />
+                <Input placeholder="Acme Corp" {...field} disabled={isSubmitting} className="text-white" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -132,7 +133,12 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-foreground">Message (Optional)</FormLabel>
               <FormControl>
-                <Textarea placeholder="How can we help your DTC brand?" {...field} className="min-h-[100px]" disabled={isSubmitting} />
+                <Textarea 
+                  placeholder="How can we help your DTC brand?" 
+                  {...field} 
+                  className={cn("min-h-[100px]", "text-white")} 
+                  disabled={isSubmitting} 
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
