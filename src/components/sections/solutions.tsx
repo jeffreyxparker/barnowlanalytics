@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   ShoppingCart, 
@@ -122,6 +123,9 @@ export default function SolutionsSection() {
       <div className="container max-w-screen-xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-headline">Our Research Solutions for DTC Brands</h2>
+          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+            Explore our comprehensive suite of research services tailored to address the specific challenges and opportunities DTC brands face.
+          </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           {solutions.map((solution) => (

@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
 import Image from "next/image";
@@ -7,7 +8,7 @@ const testimonials = [
     quote: "Bookie Research helped us optimize our product pricing during a critical growth phase. They used sophisticated methods I'd seen major consulting firms charge 5x more for, and delivered clearer, more actionable insights.",
     author: "Steve Clark",
     title: "CEO, Odyssey Bars",
-    avatar: "/avatars/steve-clark.jpg", // Updated to local path
+    avatar: "/avatars/steve-clark.jpg", 
     avatarHint: "man outdoors"
   },
   {
@@ -21,7 +22,7 @@ const testimonials = [
     quote: "Bookie Research helped us understand exactly what our target audience wanted. Their insights shaped our entire product roadmap and marketing strategy.",
     author: "Garrett Dorman",
     title: "Investor Utah Boat Club",
-    avatar: "/avatars/garrett-dorman.jpg", // Updated to local path
+    avatar: "/avatars/garrett-dorman.jpg", 
     avatarHint: "man portrait"
   },
 ];
@@ -32,16 +33,19 @@ export default function TestimonialsSection() {
       <div className="container max-w-screen-xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-headline">What Our Clients Say</h2>
+          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+            Hear directly from brands that have leveraged our insights to achieve remarkable growth and success.
+          </p>
         </div>
         <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-background border-border shadow-xl p-6 flex flex-col transform hover:scale-105 transition-transform duration-300">
               <CardContent className="flex-grow flex flex-col justify-between">
-                <div> {/* Wrapper for quote icon and text */}
+                <div> 
                   <Quote className="h-8 w-8 text-primary mb-4" />
                   <p className="text-foreground/80 mb-6 text-left">&ldquo;{testimonial.quote}&rdquo;</p>
                 </div>
-                <div className="pt-4 border-t border-border/20 mt-4"> {/* Author attribution section */}
+                <div className="pt-4 border-t border-border/20 mt-4"> 
                   <div className="flex items-center gap-3">
                     <Image 
                       src={testimonial.avatar} 
