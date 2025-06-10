@@ -19,42 +19,41 @@ export default function ContactSection() {
             <ContactForm />
           </div>
           <div className="space-y-6 pt-8 md:pt-0">
-            <div className="flex items-start gap-4 p-6 bg-card rounded-lg shadow-md">
-              <Mail className="h-8 w-8 text-accent mt-1 flex-shrink-0" />
-              <div>
+            <div className="flex items-center gap-4 p-6 bg-card rounded-lg shadow-md">
+              <Mail className="h-8 w-8 text-accent flex-shrink-0" />
+              <div className="flex-grow">
                 <h4 className="text-xl font-semibold text-primary mb-1 font-headline">Email Us</h4>
-                <p className="text-foreground/70">info@surveyspark.com</p>
-                <Button asChild variant="outline" size="sm" className="mt-3">
-                  <Link href="mailto:info@surveyspark.com">
-                    Email Us <Mail className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+                <p className="text-sm text-foreground/70">We typically respond within 24 business hours.</p>
               </div>
+              <Button asChild variant="default" size="sm" className="flex-shrink-0">
+                <Link href="mailto:info@surveyspark.com">
+                  Email Us <Mail className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
-             <div className="flex items-start gap-4 p-6 bg-card rounded-lg shadow-md">
-              <Phone className="h-8 w-8 text-accent mt-1 flex-shrink-0" />
-              <div>
+             <div className="flex items-center gap-4 p-6 bg-card rounded-lg shadow-md">
+              <Phone className="h-8 w-8 text-accent flex-shrink-0" />
+              <div className="flex-grow">
                 <h4 className="text-xl font-semibold text-primary mb-1 font-headline">Call Us</h4>
-                <p className="text-foreground/70">801-699-4700</p>
-                <Button asChild variant="outline" size="sm" className="mt-3">
-                  <Link href="tel:801-699-4700">
-                    Call Us <Phone className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+                <p className="text-sm text-foreground/70">Available weekdays, 8 AM - 5 PM Mountain Time.</p>
               </div>
+              <Button asChild variant="default" size="sm" className="flex-shrink-0">
+                <Link href="tel:801-699-4700">
+                  Call Us <Phone className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
-             <div className="flex items-start gap-4 p-6 bg-card rounded-lg shadow-md">
-              <CalendarDays className="h-8 w-8 text-accent mt-1 flex-shrink-0" />
-              <div>
+             <div className="flex items-center gap-4 p-6 bg-card rounded-lg shadow-md">
+              <CalendarDays className="h-8 w-8 text-accent flex-shrink-0" />
+              <div className="flex-grow">
                 <h4 className="text-xl font-semibold text-primary mb-1 font-headline">Schedule a Call</h4>
-                <p className="text-foreground/70">Book a convenient time to discuss your needs.</p>
-                {/* Make sure to replace the href below with your actual Calendly link */}
-                <Button asChild variant="outline" size="sm" className="mt-3">
-                  <Link href="https://calendly.com/your-link" target="_blank" rel="noopener noreferrer">
-                    Schedule Now <CalendarDays className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+                <p className="text-sm text-foreground/70">The most reliable way to connect at your convenience.</p>
               </div>
+              <Button asChild variant="default" size="sm" className="flex-shrink-0">
+                <Link href="https://calendly.com/your-link" target="_blank" rel="noopener noreferrer">
+                  Schedule on Calendly <CalendarDays className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
