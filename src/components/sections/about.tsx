@@ -27,9 +27,6 @@ export default function AboutUsSection() {
           </div>
           <div>
             <p className="text-lg text-foreground/80 mb-4">
-              Founded by Jeff Parker, former leader of the Advanced Analytics team at Qualtrics, Barn Owl Analytics brings enterprise-level survey expertise to growing DTC brands.
-            </p>
-            <p className="text-lg text-foreground/80 mb-4">
               Our team combines talent from industry leaders like Qualtrics, Sawtooth Software, and Dynata with specialized knowledge of the Shopify ecosystem and DTC business models.
             </p>
             <p className="text-lg text-foreground/80 mb-6">
