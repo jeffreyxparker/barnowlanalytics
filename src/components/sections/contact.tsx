@@ -51,8 +51,8 @@ export default function ContactSection() {
                 <p className="text-sm text-muted-foreground">The most reliable way to connect at your convenience.</p>
               </div>
               <Button asChild size="sm" className="flex-shrink-0 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                <Link href="https://calendly.com/your-link" target="_blank" rel="noopener noreferrer">
-                  Schedule on Calendly <CalendarDays className="ml-2 h-4 w-4" />
+                <Link href="https://calendar.app.google/kYr7jRbkcKkvQ1DcA" target="_blank" rel="noopener noreferrer">
+                  Schedule <CalendarDays className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
@@ -62,3 +62,4 @@ export default function ContactSection() {
     </section>
   );
 }
+
