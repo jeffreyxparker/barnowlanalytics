@@ -30,12 +30,12 @@ export default function HeroSection() {
           </div>
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl group">
              <Image 
-              src="https://placehold.co/600x400.png" 
-              alt="Market research insights dashboard" 
+              src="/images/upward-plot.png" 
+              alt="Upward trending plot indicating growth" 
               layout="fill"
               objectFit="cover"
               className="transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
-              data-ai-hint="data analytics"
+              data-ai-hint="data visualization"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
           </div>
