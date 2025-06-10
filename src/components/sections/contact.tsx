@@ -21,7 +21,7 @@ export default function ContactSection() {
           </div>
           <div className="space-y-6 pt-8 md:pt-0">
             <div className="flex items-center gap-4 p-6 bg-background rounded-lg shadow-md">
-              <Mail className="h-8 w-8 text-secondary flex-shrink-0" />
+              <Mail className="h-8 w-8 text-foreground flex-shrink-0" />
               <div className="flex-grow">
                 <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Email Us</h4>
                 <p className="text-sm text-muted-foreground">We typically respond within 24 business hours.</p>
@@ -33,7 +33,7 @@ export default function ContactSection() {
               </Button>
             </div>
              <div className="flex items-center gap-4 p-6 bg-background rounded-lg shadow-md">
-              <Phone className="h-8 w-8 text-secondary flex-shrink-0" />
+              <Phone className="h-8 w-8 text-foreground flex-shrink-0" />
               <div className="flex-grow">
                 <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Call Us</h4>
                 <p className="text-sm text-muted-foreground">Available weekdays, 8 AM - 5 PM Mountain Time.</p>
@@ -45,7 +45,7 @@ export default function ContactSection() {
               </Button>
             </div>
              <div className="flex items-center gap-4 p-6 bg-background rounded-lg shadow-md">
-              <CalendarDays className="h-8 w-8 text-secondary flex-shrink-0" />
+              <CalendarDays className="h-8 w-8 text-foreground flex-shrink-0" />
               <div className="flex-grow">
                 <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Schedule a Meeting</h4>
                 <p className="text-sm text-muted-foreground">The most reliable way to connect at your convenience.</p>
@@ -62,3 +62,4 @@ export default function ContactSection() {
     </section>
   );
 }
+
