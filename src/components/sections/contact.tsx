@@ -20,37 +20,43 @@ export default function ContactSection() {
             <ContactForm />
           </div>
           <div className="space-y-6 pt-8 md:pt-0">
-            <div className="flex items-center gap-4 p-6 bg-background rounded-lg shadow-md">
-              <Mail className="h-8 w-8 text-foreground flex-shrink-0" />
+            <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-md">
+              <Mail className="h-8 w-8 text-foreground flex-shrink-0 mt-1" />
               <div className="flex-grow">
                 <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Email Us</h4>
+                <Link href="mailto:info@barnowlanalytics.com" className="text-sm text-primary hover:underline block mb-1">
+                  info@barnowlanalytics.com
+                </Link>
                 <p className="text-sm text-muted-foreground">We typically respond within 24 business hours.</p>
               </div>
-              <Button asChild size="sm" className="flex-shrink-0 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                <Link href="mailto:info@surveyspark.com">
+              <Button asChild size="sm" className="flex-shrink-0 self-center bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                <Link href="mailto:info@barnowlanalytics.com">
                   Email Us <Mail className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
-             <div className="flex items-center gap-4 p-6 bg-background rounded-lg shadow-md">
-              <Phone className="h-8 w-8 text-foreground flex-shrink-0" />
+             <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-md">
+              <Phone className="h-8 w-8 text-foreground flex-shrink-0 mt-1" />
               <div className="flex-grow">
                 <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Call Us</h4>
+                <Link href="tel:801-699-4700" className="text-sm text-primary hover:underline block mb-1">
+                  801-699-4700
+                </Link>
                 <p className="text-sm text-muted-foreground">Available weekdays, 8 AM - 5 PM Mountain Time.</p>
               </div>
-              <Button asChild size="sm" className="flex-shrink-0 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+              <Button asChild size="sm" className="flex-shrink-0 self-center bg-secondary hover:bg-secondary/90 text-secondary-foreground">
                 <Link href="tel:801-699-4700">
                   Call Us <Phone className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
-             <div className="flex items-center gap-4 p-6 bg-background rounded-lg shadow-md">
-              <CalendarDays className="h-8 w-8 text-foreground flex-shrink-0" />
+             <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-md">
+              <CalendarDays className="h-8 w-8 text-foreground flex-shrink-0 mt-1" />
               <div className="flex-grow">
                 <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Schedule a Meeting</h4>
                 <p className="text-sm text-muted-foreground">The most reliable way to connect at your convenience.</p>
               </div>
-              <Button asChild size="sm" className="flex-shrink-0 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+              <Button asChild size="sm" className="flex-shrink-0 self-center bg-secondary hover:bg-secondary/90 text-secondary-foreground">
                 <Link href="https://calendar.app.google/kYr7jRbkcKkvQ1DcA" target="_blank" rel="noopener noreferrer">
                   Schedule <CalendarDays className="ml-2 h-4 w-4" />
                 </Link>
@@ -62,4 +68,3 @@ export default function ContactSection() {
     </section>
   );
 }
-
