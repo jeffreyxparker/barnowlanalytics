@@ -1,3 +1,4 @@
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -61,7 +62,7 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Full Name</FormLabel>
+              <FormLabel className="text-foreground">Full Name</FormLabel>
               <FormControl>
                 <Input placeholder="John Doe" {...field} />
               </FormControl>
@@ -74,7 +75,7 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email Address</FormLabel>
+              <FormLabel className="text-foreground">Email Address</FormLabel>
               <FormControl>
                 <Input placeholder="john.doe@example.com" {...field} />
               </FormControl>
@@ -87,7 +88,7 @@ export function ContactForm() {
           name="company"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Company Name</FormLabel>
+              <FormLabel className="text-foreground">Company Name</FormLabel>
               <FormControl>
                 <Input placeholder="Acme Corp" {...field} />
               </FormControl>
@@ -100,7 +101,7 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message (Optional)</FormLabel>
+              <FormLabel className="text-foreground">Message (Optional)</FormLabel>
               <FormControl>
                 <Textarea placeholder="How can we help your DTC brand?" {...field} className="min-h-[100px]" />
               </FormControl>
@@ -108,10 +109,11 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full" size="lg">
+        <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" size="lg">
           Send Message <Send className="ml-2 h-4 w-4" />
         </Button>
       </form>
     </Form>
   );
 }
+
