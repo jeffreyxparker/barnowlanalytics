@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 202 18% 26%; /* Desaturated Carbon #36454F */
+    --background: 0 0% 20%; /* Carbon #333333 */
     --foreground: 0 0% 90%; /* Light Gray for text */
 
-    --card: 203 17% 30%; /* Slightly Lighter Carbon */
+    --card: 0 0% 23%; /* Slightly Lighter Carbon */
     --card-foreground: 0 0% 90%;
 
-    --popover: 203 17% 28%; /* Similar to card, can be slightly darker or same */
+    --popover: 0 0% 18%; /* Slightly Darker Carbon */
     --popover-foreground: 0 0% 90%;
 
-    --primary: 45 65% 52%; /* Saturated Gold #D4AF37 */
-    --primary-foreground: 202 18% 10%; /* Dark Carbon for text on Gold */
+    --primary: 45 100% 51%; /* Yellow/Gold #FFC107 */
+    --primary-foreground: 0 0% 15%; /* Dark Gray for text on Primary */
 
-    --secondary: 203 100% 20%; /* Dark Blue variant for secondary elements */
-    --secondary-foreground: 0 0% 95%; /* Light Gray/White */
+    --secondary: 233 64% 30%; /* Dark Blue #1A237E */
+    --secondary-foreground: 0 0% 95%; /* Light Gray/White for text on Secondary */
 
-    --muted: 203 18% 35%; /* Muted Carbon */
-    --muted-foreground: 0 0% 65%; /* Lighter gray for muted text */
+    --muted: 0 0% 26%; /* Muted Carbon */
+    --muted-foreground: 0 0% 60%; /* Lighter gray for muted text */
 
-    --accent: 203 100% 14%; /* Dark Blue #003049 */
-    --accent-foreground: 0 0% 95%; /* Very Light Gray/White for text on Dark Blue */
+    --accent: 45 65% 52%; /* Gold #D4AF37 */
+    --accent-foreground: 0 0% 15%; /* Dark Gray for text on Accent */
 
     --destructive: 0 72% 51%; /* Standard destructive red */
     --destructive-foreground: 0 0% 98%; /* Standard light text for destructive */
 
-    --border: 203 15% 38%; /* Mid-tone Carbon for borders, slightly lighter */
-    --input: 203 15% 38%; /* Input background, same as border */
-    --ring: 45 65% 58%; /* Gold for focus rings, can be slightly brighter */
+    --border: 0 0% 28%; /* Mid-tone Carbon for borders */
+    --input: 0 0% 28%; /* Input background, same as border */
+    --ring: 45 65% 58%; /* Accent Gold #D4AF37 for focus rings (slightly brighter) */
 
     --radius: 0.5rem;
 
@@ -40,48 +40,46 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
 
-    /* Sidebar specific colors, adjust if sidebar is heavily used, or match main theme */
-    --sidebar-background: 202 18% 22%; /* Darker Carbon for sidebar */
-    --sidebar-foreground: 0 0% 85%;
-    --sidebar-primary: 45 65% 52%; /* Gold */
-    --sidebar-primary-foreground: 202 18% 10%;
-    --sidebar-accent: 203 100% 14%; /* Dark Blue */
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 203 15% 30%;
-    --sidebar-ring: 45 65% 58%;
+    /* Sidebar specific colors */
+    --sidebar-background: 0 0% 16%; /* Darker Carbon for sidebar */
+    --sidebar-foreground: 0 0% 88%;
+    --sidebar-primary: 45 100% 51%; /* Yellow/Gold #FFC107 */
+    --sidebar-primary-foreground: 0 0% 15%;
+    --sidebar-accent: 45 65% 52%; /* Gold #D4AF37 */
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 0 0% 22%;
+    --sidebar-ring: 45 65% 58%; /* Accent Gold for focus rings */
   }
 
   .dark {
-    /* This dark theme setup is now effectively the default.
-       If a true light mode is desired later, these variables would define it,
-       or this .dark block could be repurposed. For now, copying :root to ensure consistency if .dark is ever applied. */
-    --background: 202 18% 10%; /* Even Darker Carbon */
-    --foreground: 0 0% 90%; /* Light Gray */
+    /* Ensuring .dark class uses the same new theme values */
+    --background: 0 0% 20%; /* Carbon #333333 */
+    --foreground: 0 0% 90%; /* Light Gray for text */
 
-    --card: 202 18% 13%;
+    --card: 0 0% 23%; /* Slightly Lighter Carbon */
     --card-foreground: 0 0% 90%;
 
-    --popover: 202 18% 10%;
+    --popover: 0 0% 18%; /* Slightly Darker Carbon */
     --popover-foreground: 0 0% 90%;
 
-    --primary: 45 65% 52%; /* Saturated Gold */
-    --primary-foreground: 202 18% 5%; /* Very Dark Carbon for text on Gold */
+    --primary: 45 100% 51%; /* Yellow/Gold #FFC107 */
+    --primary-foreground: 0 0% 15%; /* Dark Gray for text on Primary */
 
-    --secondary: 203 100% 18%; /* Dark Blue variant */
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 233 64% 30%; /* Dark Blue #1A237E */
+    --secondary-foreground: 0 0% 95%; /* Light Gray/White for text on Secondary */
 
-    --muted: 202 18% 20%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 26%; /* Muted Carbon */
+    --muted-foreground: 0 0% 60%; /* Lighter gray for muted text */
 
-    --accent: 203 100% 14%; /* Dark Blue */
-    --accent-foreground: 0 0% 95%;
+    --accent: 45 65% 52%; /* Gold #D4AF37 */
+    --accent-foreground: 0 0% 15%; /* Dark Gray for text on Accent */
 
-    --destructive: 0 63% 31%;
+    --destructive: 0 63% 31%; /* Standard destructive red - can be darker for dark mode */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 202 18% 20%;
-    --input: 202 18% 20%;
-    --ring: 45 65% 58%;
+    --border: 0 0% 28%; /* Mid-tone Carbon for borders */
+    --input: 0 0% 28%; /* Input background, same as border */
+    --ring: 45 65% 58%; /* Accent Gold #D4AF37 for focus rings */
 
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
@@ -89,14 +87,15 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
 
-    --sidebar-background: 202 18% 8%;
+    /* Sidebar specific colors */
+    --sidebar-background: 0 0% 16%; /* Darker Carbon for sidebar */
     --sidebar-foreground: 0 0% 88%;
-    --sidebar-primary: 45 65% 52%;
-    --sidebar-primary-foreground: 202 18% 5%;
-    --sidebar-accent: 203 100% 14%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 202 18% 15%;
-    --sidebar-ring: 45 65% 58%;
+    --sidebar-primary: 45 100% 51%; /* Yellow/Gold #FFC107 */
+    --sidebar-primary-foreground: 0 0% 15%;
+    --sidebar-accent: 45 65% 52%; /* Gold #D4AF37 */
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 0 0% 22%;
+    --sidebar-ring: 45 65% 58%; /* Accent Gold for focus rings */
   }
 }
 
