@@ -32,6 +32,9 @@ export default function AboutUsSection() {
             <p className="text-lg text-foreground/80 mb-6">
               Based in Utah and Chicago, we're positioned at the intersection of cutting-edge research methodology and practical DTC marketing expertise.
             </p>
+            <p className="text-lg text-foreground/80 mb-6">
+              We chose the barn owl as our namesake and mascot because its keen sight, acute listening, and masterful navigation reflect our mission. Barn Owl Analytics empowers DTC companies to truly see and hear their market, charting a clear course for precise, data-driven growth.
+            </p>
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
               <Link href="#contact">
                 Meet Our Team <ArrowRight className="ml-2 h-5 w-5" />
