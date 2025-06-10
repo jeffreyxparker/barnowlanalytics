@@ -29,12 +29,14 @@ export default function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
-             <Image 
-              src="/images/upward-plot.png" 
-              alt="Upward trending plot indicating growth for Barn Owl Analytics" 
-              layout="fill"
-              objectFit="cover"
+          <div className="rounded-lg overflow-hidden shadow-2xl">
+             <Image
+              src="/images/upward-plot.png"
+              alt="Upward trending plot indicating growth for Barn Owl Analytics"
+              width={1280}
+              height={720}
+              className="w-full h-auto"
+              priority
               data-ai-hint="data visualization"
             />
           </div>
