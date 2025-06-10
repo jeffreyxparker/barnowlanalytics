@@ -13,7 +13,7 @@ export default function HeroSection() {
               Turn Customer Insights Into Growth
             </h1>
             <p className="text-lg md:text-xl text-foreground/80 mb-8">
-              Customer GPS helps growing DTC brands unlock customer insights that drive measurable growth. Our syndicated survey methodologies are designed specifically for direct-to-consumer businesses at critical growth stages.
+              Barn Owl Analytics helps growing DTC brands unlock customer insights that drive measurable growth. Our syndicated survey methodologies are designed specifically for direct-to-consumer businesses at critical growth stages.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -31,7 +31,7 @@ export default function HeroSection() {
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl group">
              <Image 
               src="/images/upward-plot.png" 
-              alt="Upward trending plot indicating growth" 
+              alt="Upward trending plot indicating growth for Barn Owl Analytics" 
               layout="fill"
               objectFit="cover"
               className="transform group-hover:scale-105 transition-transform duration-500 ease-in-out"

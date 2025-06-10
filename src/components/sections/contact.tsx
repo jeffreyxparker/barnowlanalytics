@@ -11,7 +11,7 @@ export default function ContactSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4 font-headline">Ready to Turn Customer Insights Into Growth?</h2>
           <p className="text-lg text-accent-foreground/80 max-w-2xl mx-auto">
-            Let's discuss how Bookie Research can help your brand make data-driven decisions that drive measurable results.
+            Let's discuss how Barn Owl Analytics can help your brand make data-driven decisions that drive measurable results.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-start">
