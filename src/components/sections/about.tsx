@@ -21,9 +21,6 @@ export default function AboutUsSection() {
           </div>
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-headline">About Customer GPS</h2>
-            <p className="text-lg text-foreground/80 mb-6">
-              Learn more about our mission, values, and the experienced team dedicated to empowering DTC brands.
-            </p>
             <p className="text-lg text-foreground/80 mb-4">
               Founded by Jeff Parker, former leader of the Advanced Analytics team at Qualtrics, Bookie Research brings enterprise-level survey expertise to growing DTC brands.
             </p>
