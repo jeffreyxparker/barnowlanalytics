@@ -17,12 +17,12 @@ export default function AboutUsSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-square max-w-md mx-auto md:max-w-none md:mx-0">
             <Image 
-              src="/images/upward-plot.png" 
-              alt="Data insights for Barn Owl Analytics" 
+              src="/images/timp.png" 
+              alt="Scenic mountain view, representing Barn Owl Analytics' vision" 
               layout="fill"
               objectFit="cover"
               className="rounded-lg shadow-2xl"
-              data-ai-hint="data visualization"
+              data-ai-hint="mountain landscape"
             />
           </div>
           <div>
