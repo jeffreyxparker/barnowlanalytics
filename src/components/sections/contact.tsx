@@ -47,7 +47,7 @@ export default function ContactSection() {
              <div className="flex items-center gap-4 p-6 bg-background rounded-lg shadow-md">
               <CalendarDays className="h-8 w-8 text-secondary flex-shrink-0" />
               <div className="flex-grow">
-                <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Schedule a Call</h4>
+                <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Schedule a Meeting</h4>
                 <p className="text-sm text-muted-foreground">The most reliable way to connect at your convenience.</p>
               </div>
               <Button asChild size="sm" className="flex-shrink-0 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
@@ -62,4 +62,3 @@ export default function ContactSection() {
     </section>
   );
 }
-
