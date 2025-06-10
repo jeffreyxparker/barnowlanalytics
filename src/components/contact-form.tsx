@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
+import React from 'react';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -33,6 +34,8 @@ const formSchema = z.object({
 
 export function ContactForm() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -44,14 +47,40 @@ export function ContactForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. We'll be in touch soon.",
-    });
-    form.reset();
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thanks for reaching out. We'll be in touch soon.",
+        });
+        form.reset();
+      } else {
+        const errorData = await response.json().catch(() => ({ message: "An error occurred." }));
+        toast({
+          title: "Error Sending Message",
+          description: errorData.message || "Something went wrong. Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error("Failed to submit form:", error);
+      toast({
+        title: "Network Error",
+        description: "Could not connect to the server. Please check your connection and try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -64,7 +93,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-foreground">Full Name</FormLabel>
               <FormControl>
-                <Input placeholder="John Doe" {...field} />
+                <Input placeholder="John Doe" {...field} disabled={isSubmitting} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -77,7 +106,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-foreground">Email Address</FormLabel>
               <FormControl>
-                <Input placeholder="john.doe@example.com" {...field} />
+                <Input type="email" placeholder="john.doe@example.com" {...field} disabled={isSubmitting} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -90,7 +119,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-foreground">Company Name</FormLabel>
               <FormControl>
-                <Input placeholder="Acme Corp" {...field} />
+                <Input placeholder="Acme Corp" {...field} disabled={isSubmitting} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -103,14 +132,15 @@ export function ContactForm() {
             <FormItem>
               <FormLabel className="text-foreground">Message (Optional)</FormLabel>
               <FormControl>
-                <Textarea placeholder="How can we help your DTC brand?" {...field} className="min-h-[100px]" />
+                <Textarea placeholder="How can we help your DTC brand?" {...field} className="min-h-[100px]" disabled={isSubmitting} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground" size="lg">
-          Send Message <Send className="ml-2 h-4 w-4" />
+        <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground" size="lg" disabled={isSubmitting}>
+          {isSubmitting ? "Sending..." : "Send Message"}
+          {!isSubmitting && <Send className="ml-2 h-4 w-4" />}
         </Button>
       </form>
     </Form>
