@@ -29,7 +29,7 @@ export default function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="rounded-lg overflow-hidden shadow-2xl">
+          <div className="rounded-lg overflow-hidden shadow-2xl transition-transform duration-300 ease-in-out hover:scale-105">
              <Image
               src="/images/upward-plot.png"
               alt="Upward trending plot indicating growth for Barn Owl Analytics"
