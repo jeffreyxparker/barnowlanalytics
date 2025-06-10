@@ -9,9 +9,9 @@ export default function ContactSection() {
     <section id="contact" className="py-16 md:py-24 bg-accent text-accent-foreground">
       <div className="container max-w-screen-xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4 font-headline">Get in Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4 font-headline">Ready to Turn Customer Insights Into Growth?</h2>
           <p className="text-lg text-accent-foreground/80 max-w-2xl mx-auto">
-            Ready to navigate your brand to new heights? Let's talk about your research needs.
+            Let's discuss how Bookie Research can help your brand make data-driven decisions that drive measurable results.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -62,4 +62,3 @@ export default function ContactSection() {
     </section>
   );
 }
-
