@@ -54,12 +54,12 @@ export default function ContactSection() {
               <CalendarDays className="h-8 w-8 text-foreground flex-shrink-0 mt-1" />
               <div className="flex-grow">
                 <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Schedule a Meeting</h4>
-                <p className="text-sm text-muted-foreground">The most reliable way to connect at your convenience.</p>
-                <p className="text-sm mt-1">
+                <p className="text-sm mt-1 mb-1">
                   <Link href="https://calendar.app.google/kYr7jRbkcKkvQ1DcA" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                     Google Calendar Scheduler
                   </Link>
                 </p>
+                <p className="text-sm text-muted-foreground">The most reliable way to connect at your convenience.</p>
               </div>
               <Button asChild size="sm" className="flex-shrink-0 self-center bg-secondary hover:bg-secondary/90 text-secondary-foreground">
                 <Link href="https://calendar.app.google/kYr7jRbkcKkvQ1DcA" target="_blank" rel="noopener noreferrer">
