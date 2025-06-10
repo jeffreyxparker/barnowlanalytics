@@ -17,7 +17,7 @@ export default function AboutUsSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-square max-w-md mx-auto md:max-w-none md:mx-0">
             <Image 
-              src="/images/timp.png" 
+              src="/images/timp.jpg" 
               alt="Scenic mountain view, representing Barn Owl Analytics' vision" 
               layout="fill"
               objectFit="cover"
