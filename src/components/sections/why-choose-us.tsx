@@ -1,17 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Target, Lightbulb, Rocket } from "lucide-react";
-
-const ShopifyIcon = () => (
-    <svg
-      role="img"
-      aria-label="Shopify logo"
-      className="h-10 w-10 text-primary mb-4"
-      fill="currentColor"
-      viewBox="0 0 100 100"
-    >
-        <path d="M81.2,8.6C78.6,3.6,72.3,0,65.2,0H34.8C27.7,0,21.4,3.6,18.8,8.6L2,47.8l16.8,39.2c2.6,5,8.9,8.6,16,8.6h30.3 c7.1,0,13.4-3.6,16-8.6L98,47.8L81.2,8.6z M50,68.9c-10.5,0-19-8.5-19-19s8.5-19,19-19s19,8.5,19,19S60.5,68.9,50,68.9z"/>
-    </svg>
-  );
+import Image from "next/image";
 
 const features = [
   {
@@ -20,7 +9,7 @@ const features = [
     description: "We don't just deliver data; we strategize with you, delivering actionable recommendations that drive real business results.",
   },
   {
-    icon: <ShopifyIcon />,
+    icon: <Image src="/images/shopify_glyph.png" alt="Shopify logo" width={40} height={40} className="mb-4" />,
     title: "Holistic Data-Driven Approach",
     description: "We integrate your Shopify analytics with survey data for deeper insights.",
   },
