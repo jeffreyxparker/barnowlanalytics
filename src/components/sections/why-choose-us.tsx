@@ -4,16 +4,6 @@ import { Target, Lightbulb, Rocket, BarChartBig } from "lucide-react";
 
 const features = [
   {
-    icon: <Target className="h-10 w-10 text-primary mb-4" />,
-    title: "DTC Specialization",
-    description: "Our time-refined methods are optimized for DTC brands seeking to grow customer bases.",
-  },
-  {
-    icon: <Rocket className="h-10 w-10 text-primary mb-4" />,
-    title: "Fast & Affordable",
-    description: "Get enterprise-quality insights at startup-friendly prices in days, not weeks.",
-  },
-  {
     icon: <Lightbulb className="h-10 w-10 text-primary mb-4" />,
     title: "Actionable Results",
     description: "We don't just deliver data; we strategize with you, delivering actionable recommendations that drive real business results.",
@@ -22,6 +12,16 @@ const features = [
     icon: <BarChartBig className="h-10 w-10 text-primary mb-4" />,
     title: "Holistic Data-Driven Approach",
     description: "We integrate your Shopify analytics with survey data for deeper insights.",
+  },
+  {
+    icon: <Rocket className="h-10 w-10 text-primary mb-4" />,
+    title: "Fast & Affordable",
+    description: "Get enterprise-quality insights at startup-friendly prices in days, not weeks.",
+  },
+  {
+    icon: <Target className="h-10 w-10 text-primary mb-4" />,
+    title: "DTC Specialization",
+    description: "Our time-refined methods are optimized for DTC brands seeking to grow customer bases.",
   },
 ];
 
