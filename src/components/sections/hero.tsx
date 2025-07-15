@@ -11,10 +11,10 @@ export default function HeroSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight font-headline">
-              Turn Customer Insights Into Growth
+              Helping You Make Your Data Useful
             </h1>
             <p className="text-lg md:text-xl text-foreground/80 mb-8">
-              Barn Owl Analytics helps growing DTC brands unlock customer insights that drive measurable growth. Our syndicated survey methodologies are designed specifically for direct-to-consumer businesses at critical growth stages.
+              Barn Owl Analytics helps companies, especially DTCs, use their own data (and sometimes some of our survey data) to illuminate insights that drive measurable growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
