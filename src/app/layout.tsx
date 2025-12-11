@@ -5,8 +5,8 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
-  title: 'Barn Owl Analytics - DTC Insights Navigator',
-  description: 'Survey research for DTC brands. Unlock actionable insights with Barn Owl Analytics.',
+  title: 'Barn Owl Analytics - Making Data Useful',
+  description: 'Analytics and data consulting for DTC brands. Unlock actionable insights with Barn Owl Analytics.',
 };
 
 export default function RootLayout({

@@ -1,4 +1,4 @@
-# **App Name**: DTC Insights Navigator
+# **App Name**: Barn Owl Analytics
 
 ## Core Features:
 
