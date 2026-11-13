@@ -44,7 +44,12 @@ export default function Why() {
     <Section
       id="why"
       eyebrow="Influencer measurement"
-      title="Influencer is a sales channel. It's measured like a popularity contest."
+      title={
+        <>
+          Influencer is <span className="text-primary">a sales channel</span>. It&apos;s measured
+          like a popularity contest.
+        </>
+      }
       intro={
         <p>
           Brands now put a serious share of their budget into creators. Most still report on it
@@ -73,7 +78,7 @@ export default function Why() {
         {QA.map((item) => (
           <article
             key={item.q}
-            className="rounded-2xl border border-border/70 bg-card p-7 lg:p-8"
+            className="rounded-2xl border border-border/70 border-t-primary bg-card p-7 [border-top-width:3px] lg:p-8"
           >
             <h3 className="text-xl font-semibold leading-snug text-foreground">{item.q}</h3>
             <p className="mt-3 leading-relaxed text-foreground/80">{item.a}</p>

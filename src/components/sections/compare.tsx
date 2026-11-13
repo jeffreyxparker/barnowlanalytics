@@ -151,7 +151,7 @@ export default function Compare() {
             and its main limitation.
           </caption>
           <thead>
-            <tr className="text-xs uppercase tracking-[0.1em] text-muted-foreground">
+            <tr className="text-xs uppercase tracking-[0.1em] text-primary">
               <th scope="col" className="w-[21%] border-b border-border pb-4 pr-4 font-semibold">
                 Method
               </th>
@@ -235,7 +235,7 @@ export default function Compare() {
             <dl className="mt-4 grid grid-cols-3 gap-2 text-center">
               {COLS.map((c) => (
                 <div key={c.key} className="rounded-lg bg-background/50 px-1 py-2">
-                  <dt className="text-[11px] leading-tight text-muted-foreground">{c.label}</dt>
+                  <dt className="text-[11px] font-semibold leading-tight text-primary">{c.label}</dt>
                   <dd className="mt-1">
                     <MarkCell mark={r[c.key]} strong={r.highlight} />
                   </dd>

@@ -22,7 +22,7 @@ export default function Hero() {
           id="hero-title"
           className="max-w-5xl text-balance text-[2.4rem] font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
         >
-          <span className="hero-line-1 font-semibold text-foreground/75">
+          <span className="hero-line-1 font-semibold text-white">
             Organic influencer content drives sales.
           </span>{" "}
           <span className="relative mt-1 inline-block">
