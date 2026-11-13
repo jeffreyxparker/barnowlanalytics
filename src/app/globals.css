@@ -72,7 +72,7 @@
 @keyframes hero-fade-up {
   from {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(20px);
   }
 }
 
@@ -102,13 +102,13 @@
 
 .hero-line-1 {
   display: block;
-  animation: hero-fade-up 1800ms cubic-bezier(0.25, 0.6, 0.25, 1) 150ms both;
+  animation: hero-fade-up 2600ms cubic-bezier(0.45, 0, 0.2, 1) 200ms both;
 }
 
 /* Line 2: ~400ms after line 1 lands, an amber wipe reveals it left to right.
    It stays in the primary yellow. */
 .hero-line-2 {
-  animation: hero-wipe 1300ms cubic-bezier(0.65, 0, 0.35, 1) 2450ms both;
+  animation: hero-wipe 1300ms cubic-bezier(0.65, 0, 0.35, 1) 3300ms both;
 }
 
 .hero-wipe-bar {
@@ -121,7 +121,7 @@
   background: hsl(var(--primary));
   box-shadow: 0 0 18px hsl(var(--primary) / 0.7);
   opacity: 0;
-  animation: hero-bar 1300ms cubic-bezier(0.65, 0, 0.35, 1) 2450ms both;
+  animation: hero-bar 1300ms cubic-bezier(0.65, 0, 0.35, 1) 3300ms both;
 }
 
 /* ------------------------------------------------------------------ */
