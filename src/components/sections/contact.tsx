@@ -1,49 +1,37 @@
+import { Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { BookCallButton } from "@/components/book-call-button";
+import { OwlMark } from "@/components/brand/owl-mark";
+import { CONTACT_EMAIL } from "@/lib/site";
 
-import { Mail, Phone, CalendarDays } from "lucide-react";
-import Link from "next/link";
-
-export default function ContactSection() {
+export default function Contact() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-accent text-accent-foreground">
-      <div className="container max-w-screen-xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4 font-headline">Ready to Turn Customer Insights Into Growth?</h2>
-          <p className="text-lg text-accent-foreground/80 max-w-2xl mx-auto">
-            Let's discuss how Barn Owl Analytics can help your brand make data-driven decisions that drive measurable results.
+    <section id="contact" aria-labelledby="contact-title" className="py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl border border-primary/30 bg-card px-6 py-14 text-center sm:px-12 md:py-20">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-1/2 top-0 h-64 w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl"
+          />
+          <OwlMark className="relative mx-auto h-10 w-10" />
+          <h2
+            id="contact-title"
+            className="relative mx-auto mt-6 max-w-3xl text-balance text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl"
+          >
+            Find out what your influencers are really worth.
+          </h2>
+          <p className="relative mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-foreground/80 md:text-xl">
+            Tell us about your next campaign, or one that just ended. We&apos;ll run a free
+            feasibility check and show you what a study would measure.
           </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-md">
-            <Mail className="h-8 w-8 text-foreground flex-shrink-0 mt-1" />
-            <div className="flex-grow">
-              <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Email Us</h4>
-              <Link href="mailto:info@barnowlanalytics.com" className="text-sm text-primary hover:underline block mb-1">
-                info@barnowlanalytics.com
-              </Link>
-              <p className="text-sm text-muted-foreground">We typically respond within 24 business hours.</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-md">
-            <Phone className="h-8 w-8 text-foreground flex-shrink-0 mt-1" />
-            <div className="flex-grow">
-              <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Call Us</h4>
-              <Link href="tel:801-699-4700" className="text-sm text-primary hover:underline block mb-1">
-                801-699-4700
-              </Link>
-              <p className="text-sm text-muted-foreground">Available weekdays, 8 AM - 5 PM Mountain Time.</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4 p-6 bg-background rounded-lg shadow-md">
-            <CalendarDays className="h-8 w-8 text-foreground flex-shrink-0 mt-1" />
-            <div className="flex-grow">
-              <h4 className="text-xl font-semibold text-foreground mb-1 font-headline">Schedule a Meeting</h4>
-               <p className="text-sm mt-1 mb-1">
-                <Link href="https://calendar.app.google/kYr7jRbkcKkvQ1DcA" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Google Calendar Scheduler
-                </Link>
-              </p>
-              <p className="text-sm text-muted-foreground">The most reliable way to connect at your convenience.</p>
-            </div>
+          <div className="relative mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <BookCallButton />
+            <Button asChild size="lg" variant="outline">
+              <a href={`mailto:${CONTACT_EMAIL}`}>
+                <Mail aria-hidden="true" />
+                {CONTACT_EMAIL}
+              </a>
+            </Button>
           </div>
         </div>
       </div>

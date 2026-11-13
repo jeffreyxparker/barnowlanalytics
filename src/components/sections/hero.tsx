@@ -1,44 +1,53 @@
-
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ChevronRight } from "lucide-react";
-import Image from "next/image";
+import { BookCallButton } from "@/components/book-call-button";
+import { LiftChart } from "@/components/charts/lift-chart";
 
-export default function HeroSection() {
+/** Headline timing: line 1 600ms → 400ms beat → 700ms wipe. Chart starts as it lands. */
+const CHART_START_MS = 1800;
+
+export default function Hero() {
   return (
-    <section id="hero" className="py-20 md:py-32 bg-gradient-to-br from-background to-card">
-      <div className="container max-w-screen-xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight font-headline">
-              Helping You Make Your Data Useful
-            </h1>
-            <p className="text-lg md:text-xl text-foreground/80 mb-8">
-              Barn Owl Analytics helps companies, especially DTCs, use their own data (and sometimes some of our survey data) to illuminate insights that drive measurable growth.
+    <section id="top" aria-labelledby="hero-title" className="relative overflow-hidden">
+      {/* Soft gold glow, very low contrast */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(600px 420px at 85% 10%, hsl(var(--primary) / 0.07), transparent 70%)",
+        }}
+      />
+      <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-14 sm:px-6 md:pb-28 md:pt-20 lg:px-8 lg:pt-24">
+        <h1
+          id="hero-title"
+          className="max-w-5xl text-balance text-[2.4rem] font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+        >
+          <span className="hero-line-1 font-semibold text-foreground/75">
+            Organic influencer content drives sales.
+          </span>{" "}
+          <span className="relative mt-1 inline-block">
+            <span className="hero-line-2 inline-block text-foreground">Now you can prove it.</span>
+            <span aria-hidden="true" className="hero-wipe-bar" />
+          </span>
+        </h1>
+
+        <div className="mt-10 grid items-center gap-12 lg:mt-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
+          <div>
+            <p className="text-pretty text-lg leading-relaxed text-foreground/80 md:text-xl">
+              Barn Owl measures the true sales lift of organic influencer campaigns, in-store and
+              online. We compare the people who follow your creators against matched people who
+              don&apos;t. No promo codes, no pixels, no extra work for your creators.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                <Link href="https://calendar.app.google/kYr7jRbkcKkvQ1DcA" target="_blank" rel="noopener noreferrer">
-                  Get Started <ChevronRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 hover:text-primary">
-                <Link href="#solutions">
-                  Our Solutions
-                </Link>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <BookCallButton />
+              <Button asChild size="lg" variant="outline">
+                <a href="#how">See how it works</a>
               </Button>
             </div>
           </div>
-          <div className="rounded-lg overflow-hidden shadow-2xl transition-transform duration-300 ease-in-out hover:scale-105">
-             <Image
-              src="/images/upward-plot.png"
-              alt="Upward trending plot indicating growth for Barn Owl Analytics"
-              width={1280}
-              height={720}
-              className="w-full h-auto"
-              priority
-              data-ai-hint="data visualization"
-            />
+
+          <div className="rounded-2xl border border-border/70 bg-card/60 p-4 pt-10 sm:p-6 sm:pt-12">
+            <LiftChart variant="lift" play="load" delayMs={CHART_START_MS} />
           </div>
         </div>
       </div>

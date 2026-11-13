@@ -1,89 +1,59 @@
-
 "use client";
 
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
-import React from 'react';
-
-const navItems = [
-  { label: 'Why Us', href: '#why-us' },
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Clients', href: '#clients' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
-];
-
-const BarnOwlLogo = () => (
-  <svg 
-    aria-label="Barn Owl Logo"
-    role="img"
-    viewBox="0 0 24 24" 
-    className="h-7 w-7 text-primary"
-    strokeWidth="1.5" 
-    stroke="currentColor" 
-    fill="none" 
-    strokeLinecap="round" 
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="12" r="9" />
-    <circle cx="9" cy="10" r="1.2" stroke="none" fill="currentColor"/>
-    <circle cx="15" cy="10" r="1.2" stroke="none" fill="currentColor"/>
-    <path d="M11 14 L12 16 L13 14" />
-    <path d="M8 6 L6 4" />
-    <path d="M16 6 L18 4" />
-  </svg>
-);
+import { useState } from "react";
+import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { OwlMark } from "@/components/brand/owl-mark";
+import { BookCallButton } from "@/components/book-call-button";
+import { NAV_ITEMS } from "@/lib/site";
 
 export default function Header() {
-  const [isSheetOpen, setIsSheetOpen] = React.useState(false);
-
-  const handleLinkClick = () => {
-    setIsSheetOpen(false);
-  };
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-xl items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <BarnOwlLogo />
-          <span className="font-bold text-xl font-headline text-primary">Barn Owl</span>
-        </Link>
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <a href="#top" className="flex items-center gap-2.5 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <OwlMark />
+          <span className="text-lg font-bold tracking-tight text-foreground">
+            Barn Owl<span className="hidden font-medium text-foreground/70 sm:inline"> Analytics</span>
+          </span>
+        </a>
 
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
+        <nav aria-label="Primary" className="hidden items-center gap-7 text-sm font-medium lg:flex">
+          {NAV_ITEMS.map((item) => (
+            <a
+              key={item.href}
               href={item.href}
-              className="transition-colors hover:text-primary"
+              className="text-foreground/80 transition-colors hover:text-primary"
             >
               {item.label}
-            </Link>
+            </a>
           ))}
+          <BookCallButton size="sm" showArrow={false} />
         </nav>
 
-        <div className="md:hidden">
-          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+        <div className="flex items-center gap-2 lg:hidden">
+          <BookCallButton size="sm" showArrow={false} />
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Navigation</span>
+              <Button variant="ghost" size="icon" aria-label="Open menu">
+                <Menu className="!size-6" aria-hidden="true" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background">
-              <nav className="flex flex-col space-y-6 pt-10">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.label}
+            <SheetContent side="right" className="w-[300px] border-border bg-background">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
+              <nav aria-label="Mobile" className="flex flex-col gap-6 pt-10">
+                {NAV_ITEMS.map((item) => (
+                  <a
+                    key={item.href}
                     href={item.href}
-                    className="text-lg transition-colors hover:text-primary"
-                    onClick={handleLinkClick}
+                    className="text-lg text-foreground/90 transition-colors hover:text-primary"
+                    onClick={() => setOpen(false)}
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 ))}
               </nav>
             </SheetContent>

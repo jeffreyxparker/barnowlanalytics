@@ -1,48 +1,64 @@
-
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { Section } from "@/components/section";
+import barnOwl from "../../../public/images/barn-owl.jpg";
 
-export default function AboutUsSection() {
+export default function About() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-card">
-      <div className="container max-w-screen-xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-headline">About Barn Owl Analytics</h2>
-           <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            Learn more about our mission, values, and the experienced team dedicated to empowering DTC brands.
+    <Section
+      id="about"
+      tone="raised"
+      eyebrow="About Barn Owl"
+      title="Influencer measurement is all we do."
+    >
+      <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="space-y-6 text-lg leading-relaxed text-foreground/80">
+          <p>
+            Barn Owl Analytics is a specialist measurement firm focused on one problem: proving
+            the sales impact of organic influencer marketing. We don&apos;t sell media, manage
+            creators, or take a cut of anyone&apos;s spend. Our only job is to tell you, as
+            accurately as possible, what your influencer program is actually worth.
           </p>
+          <p>
+            Our team brings measurement and data science experience from Haus, Amazon, and
+            Recast, and has built incrementality measurement programs for brands in DTC, CPG,
+            food &amp; beverage, and sportsbooks.
+          </p>
+
+          <div className="!mt-10 rounded-2xl border border-border/70 bg-background p-7">
+            <h3 className="text-xl font-semibold text-foreground">Why a barn owl</h3>
+            <p className="mt-3 text-base leading-relaxed text-foreground/80 md:text-lg">
+              Barn owls hunt in complete darkness. They don&apos;t need to see their prey. Their
+              ears are offset so precisely that they can pinpoint a mouse from sound alone.
+              That&apos;s our job: finding the signal you can&apos;t see. Organic influencer leaves
+              no clicks and no cookies, but the impact is still there for anyone who knows how to
+              listen.
+            </p>
+          </div>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative aspect-square max-w-md mx-auto md:max-w-none md:mx-0">
-            <Image 
-              src="/images/timp.jpg" 
-              alt="Scenic mountain view, representing Barn Owl Analytics' vision" 
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg shadow-2xl"
-              data-ai-hint="mountain landscape"
+
+        <figure className="self-center">
+          <div className="overflow-hidden rounded-2xl border border-border/70">
+            <Image
+              src={barnOwl}
+              alt="A barn owl in flight against a dark background, wings angled downward"
+              sizes="(min-width: 1024px) 560px, 100vw"
+              placeholder="blur"
+              className="h-auto w-full"
             />
           </div>
-          <div>
-            <p className="text-lg text-foreground/80 mb-4">
-              Our team combines talent from industry leaders like Qualtrics, Sawtooth Software, and Dynata with specialized knowledge of the Shopify ecosystem and DTC business models.
-            </p>
-            <p className="text-lg text-foreground/80 mb-6">
-              Based in Utah and Chicago, we're positioned at the intersection of cutting-edge research methodology and practical DTC marketing expertise.
-            </p>
-            <p className="text-lg text-foreground/80 mb-6">
-              We chose the barn owl as our namesake and mascot because its keen sight, acute listening, and masterful navigation reflect our mission. Barn Owl Analytics empowers DTC companies to truly see and hear their market, charting a clear course for precise, data-driven growth.
-            </p>
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="https://calendar.app.google/kYr7jRbkcKkvQ1DcA" target="_blank" rel="noopener noreferrer">
-                Meet Our Team <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
+          <figcaption className="mt-3 text-xs text-muted-foreground">
+            Photo:{" "}
+            <a
+              href="https://unsplash.com/photos/barn-owl-in-flight-83pR4InJ2ng"
+              className="underline decoration-muted-foreground/50 underline-offset-2 hover:text-foreground"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Phil Robson on Unsplash
+            </a>
+          </figcaption>
+        </figure>
       </div>
-    </section>
+    </Section>
   );
 }

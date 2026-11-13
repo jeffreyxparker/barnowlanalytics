@@ -1,33 +1,51 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { Toaster } from "@/components/ui/toaster";
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+import { SITE_URL } from "@/lib/site";
+
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
+
+const TITLE = "Barn Owl Analytics | Organic Influencer Incrementality Measurement";
+const DESCRIPTION =
+  "Measure the true incremental sales lift of organic influencer campaigns, in-store and online. Follower-based matched-control studies, no promo codes, nothing needed from creators.";
 
 export const metadata: Metadata = {
-  title: 'Barn Owl Analytics - Making Data Useful',
-  description: 'Analytics and data consulting for DTC brands. Unlock actionable insights with Barn Owl Analytics.',
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Barn Owl Analytics",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: "#333333",
+  colorScheme: "dark",
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased flex flex-col min-h-screen">
+    <html lang="en" className={inter.variable}>
+      <body className="flex min-h-screen flex-col">
+        <a
+          href="#main"
+          className="sr-only z-[60] rounded-md bg-primary px-4 py-2 font-semibold text-primary-foreground focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+        >
+          Skip to content
+        </a>
         <Header />
-        <main className="flex-grow">
+        <main id="main" className="flex-grow">
           {children}
         </main>
         <Footer />
-        <Toaster />
       </body>
     </html>
   );
