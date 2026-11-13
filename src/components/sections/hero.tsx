@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { BookCallButton } from "@/components/book-call-button";
 import { LiftChart } from "@/components/charts/lift-chart";
 
-/** Headline timing: line 1 1100ms → 400ms beat → 800ms wipe. Chart starts as it lands. */
-const CHART_START_MS = 2300;
+/** Headline timing: line 1 1.8s fade/slide → 500ms beat → 1.3s wipe. Chart starts as it lands. */
+const CHART_START_MS = 3750;
 
 export default function Hero() {
   return (

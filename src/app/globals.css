@@ -72,7 +72,7 @@
 @keyframes hero-fade-up {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(28px);
   }
 }
 
@@ -102,13 +102,13 @@
 
 .hero-line-1 {
   display: block;
-  animation: hero-fade-up 1100ms cubic-bezier(0.22, 0.7, 0.2, 1) both;
+  animation: hero-fade-up 1800ms cubic-bezier(0.25, 0.6, 0.25, 1) 150ms both;
 }
 
 /* Line 2: ~400ms after line 1 lands, an amber wipe reveals it left to right.
    It stays in the primary yellow. */
 .hero-line-2 {
-  animation: hero-wipe 800ms cubic-bezier(0.65, 0, 0.35, 1) 1500ms both;
+  animation: hero-wipe 1300ms cubic-bezier(0.65, 0, 0.35, 1) 2450ms both;
 }
 
 .hero-wipe-bar {
@@ -121,7 +121,7 @@
   background: hsl(var(--primary));
   box-shadow: 0 0 18px hsl(var(--primary) / 0.7);
   opacity: 0;
-  animation: hero-bar 800ms cubic-bezier(0.65, 0, 0.35, 1) 1500ms both;
+  animation: hero-bar 1300ms cubic-bezier(0.65, 0, 0.35, 1) 2450ms both;
 }
 
 /* ------------------------------------------------------------------ */
@@ -166,6 +166,25 @@
 .lc-paused,
 .lc-paused * {
   animation-play-state: paused !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* Lift bar chart ("How it works"), plays when scrolled into view      */
+/* ------------------------------------------------------------------ */
+
+@keyframes lbc-grow {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+.lbc-animate .lbc-grow {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: lbc-grow 900ms cubic-bezier(0.2, 0.8, 0.2, 1) var(--lbc-d, 0ms) both;
+}
+.lbc-animate .lbc-fade {
+  animation: lc-fade 600ms ease var(--lbc-d, 0ms) both;
 }
 
 /* Reduced motion: no animation anywhere; every element shows its final state. */
