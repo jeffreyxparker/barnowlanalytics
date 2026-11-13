@@ -45,7 +45,7 @@ export default function Results() {
     >
       <div className="mt-14 grid gap-12 lg:grid-cols-[7fr_5fr] lg:gap-16">
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-primary">
             What&apos;s in every study
           </h3>
           <ul className="mt-6 divide-y divide-border/70 border-y border-border/70">

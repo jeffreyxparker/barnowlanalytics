@@ -44,12 +44,7 @@ export default function Why() {
     <Section
       id="why"
       eyebrow="Influencer measurement"
-      title={
-        <>
-          Influencer is <span className="text-primary">a sales channel</span>. It&apos;s measured
-          like a popularity contest.
-        </>
-      }
+      title="Influencer is a sales channel. It's measured like a popularity contest."
       intro={
         <p>
           Brands now put a serious share of their budget into creators. Most still report on it
