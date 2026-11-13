@@ -17,8 +17,14 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/#top" className="flex items-center gap-2.5 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
           <OwlMark />
-          <span className="text-lg font-bold tracking-tight text-foreground">
-            Barn Owl<span className="hidden font-medium text-foreground/70 sm:inline"> Analytics</span>
+          <span className="flex items-baseline whitespace-nowrap text-lg font-bold tracking-tight text-foreground">
+            Barn Owl<span className="hidden sm:inline">&nbsp;Analytics</span>
+            <span aria-hidden="true" className="mx-2.5 hidden font-light text-foreground/30 md:inline lg:hidden xl:inline">
+              |
+            </span>
+            <span className="hidden text-base font-medium tracking-normal text-foreground/70 md:inline lg:hidden xl:inline">
+              <span className="sr-only">, </span>Influencer Measurement
+            </span>
           </span>
         </Link>
 
@@ -27,7 +33,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-foreground/80 transition-colors hover:text-primary"
+              className="whitespace-nowrap text-foreground/80 transition-colors hover:text-primary"
             >
               {item.label}
             </Link>

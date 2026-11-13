@@ -1,4 +1,3 @@
-import { ArrowDown, ArrowRight } from "lucide-react";
 import { Section } from "@/components/section";
 import { LiftBarChart } from "@/components/charts/lift-bar-chart";
 
@@ -24,43 +23,27 @@ export default function How() {
       eyebrow="How it works"
       title="A real counterfactual for organic content, in three steps."
     >
-      <ol className="mt-14 grid gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-stretch lg:gap-3">
+      <ol className="mt-14 grid gap-4 lg:grid-cols-3 lg:gap-5">
         {STEPS.map((step, i) => (
-          <li key={step.title} className="contents">
-            <div className="rounded-2xl border border-border/70 bg-card p-6 lg:p-7">
-              <p
-                aria-hidden="true"
-                className="text-5xl font-bold leading-none tracking-tight text-primary"
-              >
-                {i + 1}
-              </p>
-              <h3 className="mt-5 text-xl font-semibold leading-snug text-foreground">
-                <span className="sr-only">Step {i + 1}: </span>
-                {step.title}
-              </h3>
-              <p className="mt-3 leading-relaxed text-foreground/80">{step.body}</p>
-            </div>
-            {i < STEPS.length - 1 && <Connector />}
+          <li key={step.title} className="rounded-2xl border border-border/70 bg-card p-6 lg:p-7">
+            <p
+              aria-hidden="true"
+              className="text-5xl font-bold leading-none tracking-tight text-primary"
+            >
+              {i + 1}
+            </p>
+            <h3 className="mt-5 text-xl font-semibold leading-snug text-foreground">
+              <span className="sr-only">Step {i + 1}: </span>
+              {step.title}
+            </h3>
+            <p className="mt-3 leading-relaxed text-foreground/80">{step.body}</p>
           </li>
         ))}
       </ol>
 
-      <div className="flex justify-center py-4 text-primary" aria-hidden="true">
-        <ArrowDown className="h-7 w-7" />
-      </div>
-
-      <div className="mx-auto max-w-2xl rounded-2xl border border-border/70 bg-card p-5 pb-8 sm:p-8 sm:pb-10">
+      <div className="mt-5 rounded-2xl border border-border/70 bg-card p-5 sm:p-8">
         <LiftBarChart />
       </div>
     </Section>
-  );
-}
-
-function Connector() {
-  return (
-    <div aria-hidden="true" className="flex items-center justify-center text-primary">
-      <ArrowDown className="h-6 w-6 lg:hidden" />
-      <ArrowRight className="hidden h-6 w-6 lg:block" />
-    </div>
   );
 }

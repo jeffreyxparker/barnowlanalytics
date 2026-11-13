@@ -114,6 +114,7 @@ export function LiftChart({
   showLegend = true,
   lineLabels = false,
   markerLabel = "Campaign goes live",
+  xLabel,
 }: {
   variant?: Variant;
   play?: Play;
@@ -122,6 +123,8 @@ export function LiftChart({
   showLegend?: boolean;
   lineLabels?: boolean;
   markerLabel?: string;
+  /** Optional X-axis title (e.g. "Date"). */
+  xLabel?: string;
 }) {
   const rawId = useId();
   const id = rawId.replace(/[^a-zA-Z0-9_-]/g, "");
@@ -332,6 +335,14 @@ export function LiftChart({
             >
               Sales
             </span>
+            {xLabel && (
+              <span
+                className="absolute -translate-x-1/2 font-medium uppercase tracking-[0.14em] text-muted-foreground"
+                style={{ left: pctX((PLOT.left + PLOT.right) / 2), top: pctY(PLOT.bottom + 8) }}
+              >
+                {xLabel}
+              </span>
+            )}
             <span
               className="lc-marker absolute whitespace-nowrap font-medium text-foreground/80"
               style={{ left: `calc(${pctX(MARKER_X)} + 8px)`, top: pctY(PLOT.top - 30) }}
