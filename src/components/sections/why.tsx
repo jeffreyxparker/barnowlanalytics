@@ -43,7 +43,7 @@ export default function Why() {
   return (
     <Section
       id="why"
-      eyebrow="Influencer measurement"
+      eyebrow="Why it's hard"
       title="Influencer is a sales channel. It's measured like a popularity contest."
       intro={
         <p>
