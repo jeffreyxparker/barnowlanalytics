@@ -85,6 +85,8 @@ const followerPts: Pt[] = xs.map((x, i) => [
 const liftLabelIndex = 33;
 
 export const liftChart = {
+  followerPts,
+  controlPts,
   followers: smoothPath(followerPts),
   control: smoothPath(controlPts),
   gap: areaBetween(followerPts.slice(MARKER_INDEX), controlPts.slice(MARKER_INDEX)),
@@ -124,6 +126,19 @@ export const forecastChart = {
     y: (actualPts[MARKER_INDEX + fcLabelIndex][1] + forecastPts[fcLabelIndex][1]) / 2 - 6,
   },
 };
+
+/** Linear interpolation of a series' y at x (x within the series' range). */
+export function yAt(points: Pt[], x: number): number {
+  if (x <= points[0][0]) return points[0][1];
+  for (let i = 1; i < points.length; i++) {
+    const [x1, y1] = points[i];
+    if (x <= x1) {
+      const [x0, y0] = points[i - 1];
+      return y0 + ((y1 - y0) * (x - x0)) / (x1 - x0);
+    }
+  }
+  return points[points.length - 1][1];
+}
 
 /** Convert viewBox coordinates to CSS percentages for HTML overlays. */
 export const pctX = (x: number) => `${((x / VIEW_W) * 100).toFixed(2)}%`;

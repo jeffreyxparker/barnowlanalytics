@@ -1,6 +1,6 @@
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { Section } from "@/components/section";
-import { LiftChart } from "@/components/charts/lift-chart";
+import { LiftBarChart } from "@/components/charts/lift-bar-chart";
 
 const STEPS = [
   {
@@ -49,8 +49,8 @@ export default function How() {
         <ArrowDown className="h-7 w-7" />
       </div>
 
-      <div className="mx-auto max-w-3xl rounded-2xl border border-border/70 bg-card p-5 pt-10 sm:p-8 sm:pt-12">
-        <LiftChart variant="lift" play="none" />
+      <div className="mx-auto max-w-2xl rounded-2xl border border-border/70 bg-card p-5 pb-8 sm:p-8 sm:pb-10">
+        <LiftBarChart />
       </div>
     </Section>
   );

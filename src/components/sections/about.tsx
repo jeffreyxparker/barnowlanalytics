@@ -10,7 +10,7 @@ export default function About() {
       eyebrow="About Barn Owl"
       title="Influencer measurement is all we do."
     >
-      <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="mt-10 grid items-center gap-12 lg:grid-cols-[7fr_5fr] lg:gap-16">
         <div className="space-y-6 text-lg leading-relaxed text-foreground/80">
           <p>
             Barn Owl Analytics is a specialist measurement firm focused on one problem: proving
@@ -23,41 +23,24 @@ export default function About() {
             Recast, and has built incrementality measurement programs for brands in DTC, CPG,
             food &amp; beverage, and sportsbooks.
           </p>
-
-          <div className="!mt-10 rounded-2xl border border-border/70 bg-background p-7">
-            <h3 className="text-xl font-semibold text-foreground">Why a barn owl</h3>
-            <p className="mt-3 text-base leading-relaxed text-foreground/80 md:text-lg">
-              Barn owls hunt in complete darkness. They don&apos;t need to see their prey. Their
-              ears are offset so precisely that they can pinpoint a mouse from sound alone.
-              That&apos;s our job: finding the signal you can&apos;t see. Organic influencer leaves
-              no clicks and no cookies, but the impact is still there for anyone who knows how to
-              listen.
-            </p>
-          </div>
+          <p>
+            <strong className="font-semibold text-foreground">Why a barn owl:</strong> Barn owls
+            hunt in complete darkness. They don&apos;t need to see their prey. Their ears are
+            offset so precisely that they can pinpoint a mouse from sound alone. That&apos;s our
+            job: finding the signal you can&apos;t see. Organic influencer leaves no clicks and no
+            cookies, but the impact is still there for anyone who knows how to listen.
+          </p>
         </div>
 
-        <figure className="self-center">
-          <div className="overflow-hidden rounded-2xl border border-border/70">
-            <Image
-              src={barnOwl}
-              alt="A barn owl in flight against a dark background, wings angled downward"
-              sizes="(min-width: 1024px) 560px, 100vw"
-              placeholder="blur"
-              className="h-auto w-full"
-            />
-          </div>
-          <figcaption className="mt-3 text-xs text-muted-foreground">
-            Photo:{" "}
-            <a
-              href="https://unsplash.com/photos/barn-owl-in-flight-83pR4InJ2ng"
-              className="underline decoration-muted-foreground/50 underline-offset-2 hover:text-foreground"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Phil Robson on Unsplash
-            </a>
-          </figcaption>
-        </figure>
+        <div className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-border/70 lg:max-w-none">
+          <Image
+            src={barnOwl}
+            alt="A barn owl perched on a branch, looking toward the camera"
+            sizes="(min-width: 1024px) 420px, (min-width: 640px) 384px, 100vw"
+            placeholder="blur"
+            className="h-auto w-full"
+          />
+        </div>
       </div>
     </Section>
   );

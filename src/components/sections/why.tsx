@@ -21,7 +21,7 @@ const QA: { q: string; a: React.ReactNode }[] = [
       <>
         Incremental sales are the sales that happened because of the campaign. They&apos;re the
         difference between what exposed people bought and what they would have bought without
-        it — this is called the <strong className="font-semibold text-primary">causal lift</strong>.
+        it — this is called the causal lift.
       </>
     ),
   },
@@ -43,7 +43,7 @@ export default function Why() {
   return (
     <Section
       id="why"
-      eyebrow="Why it's hard"
+      eyebrow="Influencer measurement"
       title="Influencer is a sales channel. It's measured like a popularity contest."
       intro={
         <p>

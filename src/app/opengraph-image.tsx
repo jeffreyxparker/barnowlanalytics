@@ -1,10 +1,10 @@
 import { ImageResponse } from "next/og";
-import { VIEW_W, VIEW_H, PLOT, MARKER_X, liftChart } from "@/lib/chart-geometry";
+import { VIEW_W, VIEW_H, PLOT, MARKER_X, liftChart, yAt } from "@/lib/chart-geometry";
 
 /** OG image: the final frame of the hero lift chart + the owl mark. */
 
 export const alt =
-  "Barn Owl Analytics: followers' sales rise above a matched control after the campaign goes live, showing incremental lift.";
+  "Barn Owl Analytics: followers' sales rise above a matched control after influencers go live, showing incremental lift.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -57,16 +57,6 @@ export default function OpengraphImage() {
               Barn Owl<span style={{ color: MUTED, fontWeight: 400, marginLeft: 10 }}>Analytics</span>
             </div>
           </div>
-          <div style={{ display: "flex", gap: 28, fontSize: 22, color: MUTED }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div style={{ width: 28, height: 4, borderRadius: 4, background: GOLD }} />
-              Followers
-            </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div style={{ width: 28, height: 4, borderRadius: 4, background: CONTROL }} />
-              Matched control
-            </div>
-          </div>
         </div>
 
         <div
@@ -91,7 +81,7 @@ export default function OpengraphImage() {
                 color: FG,
               }}
             >
-              Campaign goes live
+              Influencers go live
             </div>
             <div
               style={{
@@ -107,6 +97,30 @@ export default function OpengraphImage() {
               }}
             >
               Incremental lift
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                right: chartW - sx(PLOT.right),
+                bottom: chartH - sy(yAt(liftChart.followerPts, PLOT.right) - 9),
+                fontSize: 22,
+                fontWeight: 700,
+                color: GOLD,
+              }}
+            >
+              Followers
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                right: chartW - sx(PLOT.right),
+                top: sy(yAt(liftChart.controlPts, PLOT.right) + 9),
+                fontSize: 22,
+                fontWeight: 700,
+                color: CONTROL,
+              }}
+            >
+              Matched control
             </div>
           </div>
         </div>

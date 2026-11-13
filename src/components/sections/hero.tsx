@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { BookCallButton } from "@/components/book-call-button";
 import { LiftChart } from "@/components/charts/lift-chart";
 
-/** Headline timing: line 1 600ms → 400ms beat → 700ms wipe. Chart starts as it lands. */
-const CHART_START_MS = 1800;
+/** Headline timing: line 1 1100ms → 400ms beat → 800ms wipe. Chart starts as it lands. */
+const CHART_START_MS = 2300;
 
 export default function Hero() {
   return (
@@ -26,7 +26,7 @@ export default function Hero() {
             Organic influencer content drives sales.
           </span>{" "}
           <span className="relative mt-1 inline-block">
-            <span className="hero-line-2 inline-block text-foreground">Now you can prove it.</span>
+            <span className="hero-line-2 inline-block text-primary">Now you can prove it.</span>
             <span aria-hidden="true" className="hero-wipe-bar" />
           </span>
         </h1>
@@ -36,7 +36,10 @@ export default function Hero() {
             <p className="text-pretty text-lg leading-relaxed text-foreground/80 md:text-xl">
               Barn Owl measures the true sales lift of organic influencer campaigns, in-store and
               online. We compare the people who follow your creators against matched people who
-              don&apos;t. No promo codes, no pixels, no extra work for your creators.
+              don&apos;t.{" "}
+              <strong className="font-semibold text-foreground">
+                No promo codes, no pixels, no extra work for your creators.
+              </strong>
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <BookCallButton />
@@ -47,7 +50,13 @@ export default function Hero() {
           </div>
 
           <div className="rounded-2xl border border-border/70 bg-card/60 p-4 pt-10 sm:p-6 sm:pt-12">
-            <LiftChart variant="lift" play="load" delayMs={CHART_START_MS} />
+            <LiftChart
+              variant="lift"
+              play="load"
+              delayMs={CHART_START_MS}
+              markerLabel="Influencers go live"
+              lineLabels
+            />
           </div>
         </div>
       </div>
