@@ -1,5 +1,5 @@
 export const SITE_URL = "https://barnowlanalytics.com";
-export const BOOK_CALL_URL = "https://calendar.app.google/kYr7jRbkcKkvQ1DcA";
+export const BOOK_CALL_URL = "https://calendar.app.google/JQC1RrpKZhF6PrL79";
 export const CONTACT_EMAIL = "info@barnowlanalytics.com";
 
 export const NAV_ITEMS = [

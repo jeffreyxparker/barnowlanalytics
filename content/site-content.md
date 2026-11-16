@@ -15,7 +15,7 @@ Nov 12, 2026 · @Jeff Parker
 - Palette: Same as the current page. Keep the barn owl mark and use it sparingly.
 - No pricing page, no blog, no logo strip, no proof bar, no headshots for v1.
 - All motion respects prefers-reduced-motion. With reduced motion on, show the final state statically.
-- Primary CTA everywhere: https://calendar.app.google/kYr7jRbkcKkvQ1DcA
+- Primary CTA everywhere: https://calendar.app.google/JQC1RrpKZhF6PrL79
 - Remove all old content: Shopify, survey, DTC questions, the old testimonials, and the old logo collage.
 
 **Nav:** Why it's hard · How it works · Compare · Methods · About · Book a call (button)
